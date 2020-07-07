@@ -1,4 +1,13 @@
 <%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
+<!-- 
+*
+*负责获取相对路径
+*
+*request.getContextPath()：站点的根路径
+*request.getScheme()：返回的协议名称,默认是http
+*request.getServerName()：返回的是你浏览器中显示的主机名
+*request.getServerPort()：返回服务器端口
+ -->
 <%
 	String path = request.getContextPath();
 	String basePath = request.getScheme() + "://"
@@ -27,6 +36,7 @@
 		$.ajax({
 			type : 'POST',
 			url : '${pageContext.request.contextPath}/user/registeryz',
+			
 			data : 'username=' + username,
 			success : function(date) {
 				if (date.length > 0) {

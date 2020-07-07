@@ -23,26 +23,22 @@ public class UserServiceiml implements UserService {
 		return Userdao.selectByname(username);
 	}
 
-	@Override
 	public int insertUserm(Userm userm) {
 		// TODO Auto-generated method stub
 		
 		return Userdao.insert(userm);
 	}
 
-	@Override
 	public Userm queryUser(Userm record) {
 		// TODO Auto-generated method stub
 		return Userdao.queryUser(record);
 	}
 
-	@Override
 	public int updateUser(Userm userm) {
 		// TODO Auto-generated method stub
 		return Userdao.updateByPrimaryKey(userm);
 	}
 
-	@Override
 	public int delUser( int userid) {
 		// TODO Auto-generated method stub
 		return Userdao.deleteByPrimaryKey(userid);

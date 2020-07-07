@@ -21,6 +21,11 @@ public class UserController {
 	@Autowired
 	private HttpServletRequest request;
 
+	
+	
+	
+	
+	
 	@RequestMapping("/showUser")
 	public String toIndex() {
 		System.out.println("进入方法");
